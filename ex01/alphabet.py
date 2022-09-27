@@ -28,7 +28,7 @@ def shutudai(alphabet):
     print("デバッグ用欠損文字：", abs_chars)
     return abs_chars
 
-def kaito(seikai):
+def kaito(kotae):
     ans = int(input("欠損文字はいくつあるでしょうか？："))
     if ans != defect_chars:
         print("不正解です")
@@ -36,11 +36,11 @@ def kaito(seikai):
         print("正解です. それでは、具体的に欠損文字を1つずつ入力してください")
         for i in range(ans):
             a = input(f"{i+1}文字目を入力してください：")
-            if a not in seikai:
+            if a not in kotae:
                 print("不正解です.　またチャレンジしてください：")
                 return False
             else:
-                seikai.remove(a)
+                kotae.remove(a)
         else:
             print("欠損文字も含めて完全正解です！！")
             return True
