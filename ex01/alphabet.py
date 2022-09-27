@@ -49,7 +49,7 @@ def kaito(seikai):
 
 if __name__ == "__main__":
     start = time.time()
-    alphabet = [chr(i+65) for i in range(all_alphabet)]
+    alphabet = [chr(i + 65) for i in range(all_alphabet)]
     print(alphabet)
 
     for i in range(try_chars):
