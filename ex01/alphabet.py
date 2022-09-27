@@ -1,4 +1,3 @@
-from multiprocessing.connection import answer_challenge
 import random
 from site import abs_paths
 import time
