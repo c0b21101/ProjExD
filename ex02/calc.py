@@ -15,9 +15,13 @@ def click_equal(event):
     entry.insert(tk.END, res)
 
 
-def click_ac(event):
+def click_c(event):
     eqn = entry.get()
     entry.delete(len(eqn)-1, tk.END)
+
+
+def click_ac(event):
+    entry.delete(0, tk.END)
 
 
 root = tk.Tk()
@@ -38,12 +42,16 @@ for i, num in enumerate(numbers+operators, 1):
         r += 1
         c = 0
 
-btn = tk.Button(root, text=f"=", width=4, height=2, font=("", 30))
+btn = tk.Button(root, text=f"=", width=4, height=2, font=("", 30), bg = "light blue")
 btn.bind("<1>", click_equal)
 btn.grid(row=r, column=c)
 
-btn = tk.Button(root, text="C", width=4, height=2, font=("",30))
+btn = tk.Button(root, text="C", width=4, height=2, font=("",30), bg = "light blue")
 btn.bind("<1>", click_ac)
 btn.grid(row=r+1, column=c)
+
+btn = tk.Button(root, text="AC", width=4, height=2, font=("", 30), bg = "light blue")
+btn.bind("<1>", click_ac)
+btn.grid(row=r+1, column=1)
 
 root.mainloop()        
