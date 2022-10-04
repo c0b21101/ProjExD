@@ -23,7 +23,7 @@ root.geometry("300x500")
 entry = tk.Entry(root, width=10, font=(", 40"), justify="right")
 entry.grid(row=0, column=0, columnspan=3)
 
-r, c = 9, 0
+r, c = 1, 0
 numbers = list(range(9, -1, -1))
 operators = ["+"]
 for i, num in enumerate(numbers+operators, 1):
