@@ -14,7 +14,6 @@ def click_equal(event):
     entry.delete(0, tk.END)
     entry.insert(tk.END, res)
 
-
 def click_c(event):
     eqn = entry.get()
     entry.delete(len(eqn)-1, tk.END)
