@@ -47,7 +47,7 @@ btn.bind("<1>", click_equal)
 btn.grid(row=r, column=c)
 
 btn = tk.Button(root, text="C", width=4, height=2, font=("",30), bg = "light blue")
-btn.bind("<1>", click_ac)
+btn.bind("<1>", click_c)
 btn.grid(row=r+1, column=c)
 
 btn = tk.Button(root, text="AC", width=4, height=2, font=("", 30), bg = "light blue")
