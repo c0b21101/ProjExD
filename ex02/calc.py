@@ -1,7 +1,5 @@
-import numbers
 import tkinter as tk
 import tkinter.messagebox as tkm
-from turtle import right, width
 
 def click_number(event):
     btn = event.widget
