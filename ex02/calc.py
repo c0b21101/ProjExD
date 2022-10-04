@@ -7,7 +7,7 @@ def click_number(event):
     tkm.showinfo(f"{num}", f"{num}のボタンが押されました")
 
 
-root = tk.Tk
+root = tk.Tk()
 root.geometry("300x500")
 
 
