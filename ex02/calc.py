@@ -1,6 +1,6 @@
 import tkinter as tk
 import tkinter.messagebox as tkm
-from turtle import width
+from turtle import right, width
 
 def click_number(event):
     btn = event.widget
@@ -11,6 +11,8 @@ def click_number(event):
 root = tk.Tk()
 root.geometry("300x500")
 
+entry = tk.Entry(root, justify=right, width=10, font=("", 40))
+entry.grid(row=0, colunm=0, colunmspan=3)
 
 r, c = 1, 0
 for i, num in enumerate(range(9,-1, -1,), 1):
