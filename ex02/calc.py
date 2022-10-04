@@ -13,7 +13,7 @@ root.geometry("300x500")
 
 r, c = 1, 0
 for i, num in enumerate(range(9,-1, -1,), 1):
-    btn = tk.Button(root, widht=4, height=2, font=(" ", 30))
+    btn = tk.Button(root, text=f"{num}", widht=4, height=2, font=("", 30))
     btn.bind("<1>", click_number)
     btn.grid(row=r, column=c)
     c += 1
