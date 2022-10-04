@@ -16,6 +16,7 @@ entry = tk.Entry(root, width=10, font=("", 40), justify="right")
 entry.grid(row=0, column=0, columnspan=3)
 
 r, c = 1, 0
+operators = ["+"]
 for i, num in enumerate(range(9,-1, -1,), 1):
     btn = tk.Button(root, text=f"{num}", width=4, height=2, font=("", 30))
     btn.bind("<1>", click_number)
