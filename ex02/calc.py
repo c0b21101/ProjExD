@@ -3,7 +3,7 @@ import tkinter.messagebox as tkm
 
 def click_number(event):
     btn = event.widget
-    num = int(btn["text"])
+    num = btn["text"]
     # tkm.showinfo(f"{num}", f"{num}のボタンが押されました")
     entry.insert(tk.END, num)
 
