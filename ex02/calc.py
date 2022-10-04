@@ -11,7 +11,7 @@ def click_number(event):
 root = tk.Tk()
 root.geometry("300x500")
 
-entry = tk.Entry(root, justify=right, width=10, font=("", 40))
+entry = tk.Entry(root, width=10, font=(", 40"), justify=right)
 entry.grid(row=0, colunm=0, colunmspan=3)
 
 r, c = 1, 0
