@@ -1,5 +1,10 @@
 import tkinter as tk
-from turtle import bgcolor
+
+#練習5
+def key_down(event):
+    global key
+    key = event.keysym #練習5
+
 
 if __name__ == "__main__":
     root = tk.Tk()
@@ -11,7 +16,11 @@ if __name__ == "__main__":
     tori = tk.PhotoImage(file="fig/0.png")
     cx, cy = 300, 400
     canv.create_image(cx, cy, image=tori, tag="tori") #練習3
+    
+    #練習4 
+    key = ""  #グローバル変数keyは、現在押されているキーを表す変数である
 
-    key = "" #練習4 グローバル変数keyは、現在押されているキーを表す変数である
+    #練習5
+    root.bind("KeyPress", key_down)
 
     root.mainloop()
