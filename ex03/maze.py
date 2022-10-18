@@ -55,7 +55,7 @@ if __name__ == "__main__":
     #練習10
     mm.show_maze(canv, maze_lst)
 
-    tori = tk.PhotoImage(file="fig/0.png")
+    tori = tk.PhotoImage(file="fig/2.png")
     mx, my = 1, 1 #練習11
     cx, cy = mx*100, my*100 #練習11
     canv.create_image(cx, cy, image=tori, tag="tori") #練習3
