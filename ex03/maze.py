@@ -5,6 +5,11 @@ def key_down(event):
     global key
     key = event.keysym #練習5
 
+#練習6
+def key_up(event):
+    global key
+    key = event.keysym
+
 
 if __name__ == "__main__":
     root = tk.Tk()
@@ -20,7 +25,8 @@ if __name__ == "__main__":
     #練習4 
     key = ""  #グローバル変数keyは、現在押されているキーを表す変数である
 
-    #練習5
+    #練習5,6
     root.bind("KeyPress", key_down)
+    root.bind("<KeyRelease", key_up)
 
     root.mainloop()
