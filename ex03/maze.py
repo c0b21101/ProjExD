@@ -3,7 +3,7 @@ import maze_maker as mm #練習8
 
 #練習5
 def key_down(event):
-    global key
+    global key, tori
     key = event.keysym #練習5
 
 
@@ -38,7 +38,7 @@ def main_proc():
             mx -= 1
     canv.coords("tori", cx, cy)
     root.after(100, main_proc)
-
+    
 
 if __name__ == "__main__":
     root = tk.Tk()
@@ -54,8 +54,9 @@ if __name__ == "__main__":
 
     #練習10
     mm.show_maze(canv, maze_lst)
-
-    tori = tk.PhotoImage(file="fig/2.png")
+    
+    file_lst = ["fig/0.png","fig/1.png","fig/2.png","fig/3.png","fig/4.png","fig/5.png","fig/6.png","fig/7.png","fig/8.png","fig/9.png"]
+    tori = tk.PhotoImage(file=file_lst)
     mx, my = 1, 1 #練習11
     cx, cy = mx*100, my*100 #練習11
     canv.create_image(cx, cy, image=tori, tag="tori") #練習3
