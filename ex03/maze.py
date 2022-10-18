@@ -13,7 +13,7 @@ def key_up(event):
     key = ""  #どのキーも押されていないことを意味する
 
 
-#練習7
+#練習7,11,12
 def main_proc():
     global mx, my
     global cx, cy
@@ -25,7 +25,17 @@ def main_proc():
         mx -= 1
     if key == "Right":
         mx += 1
-    cx, cy = mx*100+50, my*100+50
+    if maze_lst[my][mx] == 0: #床だったら
+        cx, cy = mx*100+50, my*100+50
+    else: #壁だったら
+        if key == "Up":
+            my += 1
+        if key == "Down":
+            my -= 1
+        if key == "Left":
+            mx += 1
+        if key == "Right":
+            mx -= 1
     canv.coords("tori", cx, cy)
     root.after(100, main_proc)
 
@@ -46,7 +56,7 @@ if __name__ == "__main__":
     mm.show_maze(canv, maze_lst)
 
     tori = tk.PhotoImage(file="fig/0.png")
-    mx, my = 1, 1
+    mx, my = 1, 1 #練習11
     cx, cy = mx*100, my*100 #練習11
     canv.create_image(cx, cy, image=tori, tag="tori") #練習3
     
