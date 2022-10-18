@@ -1,4 +1,5 @@
 import tkinter as tk
+import maze_maker as mm
 
 #練習5
 def key_down(event):
