@@ -1,5 +1,5 @@
 import tkinter as tk
-import maze_maker as mm
+import maze_maker as mm #練習8
 
 #練習5
 def key_down(event):
@@ -13,6 +13,7 @@ def key_up(event):
     key = ""  #どのキーも押されていないことを意味する
 
 
+#練習7
 def main_proc():
     global cx, cy, key
     if key == "Up":
@@ -47,5 +48,10 @@ if __name__ == "__main__":
 
     #練習7
     main_proc()
+
+    #練習9
+    maze_lst = mm.make_maze(15, 9)
+    print(maze_lst)
+
 
     root.mainloop()
