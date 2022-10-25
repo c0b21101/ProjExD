@@ -39,8 +39,9 @@ def main():
         if key_states[pg.K_LEFT]:  tori_rct.centerx -= 1
         if key_states[pg.K_RIGHT]: tori_rct.centerx += 1
 
-        scrn_sfc.blit(tori_sfc, tori_rct)
-        scrn_sfc.blit(bomb_sfc, bomb_rct)
+        scrn_sfc.blit(tori_sfc, tori_rct) # 練習3
+
+        scrn_sfc.blit(bomb_sfc, bomb_rct) # 練習5
 
 
 
