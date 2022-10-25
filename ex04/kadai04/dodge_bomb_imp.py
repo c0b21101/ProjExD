@@ -51,6 +51,7 @@ def main():
     vx, vy = +1, +1
     vx2, vy2 = +2, +2
 
+    #画面にSTARTと表示
     fonto = pg.font.Font(None, 80)
     tmr = "START"
     BLUE = ("blue")
@@ -96,10 +97,10 @@ def main():
         scrn_sfc.blit(bomb_sfc, bomb_rct) # 練習5
         scrn_sfc.blit(bomb_sfc2, bomb_rct2) # 爆弾追加
 
-
+        # 画面にGAME OVERと表示
         # 練習8
         if tori_rct.colliderect(bomb_rct): # こうかとんrctが爆弾rctと重なったら
-            #こうかとんrctが爆弾rctと重なったらGAME OVERを表示
+            # こうかとんrctが爆弾rctと重なったら画面にGAME OVERと表示
             fonto = pg.font.Font(None, 80)
             tmr = "GAME OVER"
             RED = ("red")
@@ -110,7 +111,6 @@ def main():
             pg.quit()
             sys.exit()
 
-        # 爆弾追加
         if tori_rct.colliderect(bomb_rct2): # こうかとんrctが爆弾rctと重なったら
             #こうかとんrctが爆弾rctと重なったらGAME OVERを表示
             fonto = pg.font.Font(None, 80)
