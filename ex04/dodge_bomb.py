@@ -22,6 +22,14 @@ def main():
 
         scrn_sfc.blit(tori_sfc, tori_rct)
 
+        # 練習4
+        key_states = pg.key.get_pressed()
+        if key_states[pg.K_UP]:    tori_rct.centery -= 1 
+        if key_states[pg.K_DOWN]:  tori_rct.centery +=1
+        if key_states[pg.K_LEFT]:  tori_rct.centerx -= 1
+        if key_states[pg.K_RIGHT]: tori_rct.centerx += 1
+
+
         pg.display.update() # 練習2
         clock.tick(1000)
 
