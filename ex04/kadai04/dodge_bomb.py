@@ -122,7 +122,6 @@ def main():
             sleep(1)
             pg.quit()
             sys.exit()
-            
         pg.display.update() # 練習2
         clock.tick(1000)
 
