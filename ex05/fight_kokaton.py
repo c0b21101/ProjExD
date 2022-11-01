@@ -28,7 +28,6 @@ class Bird:
         pg.K_RIGHT: [+8, 0],
     }  
 
-
     def __init__(self, img, zoom, xy):
         sfc = pg.image.load(img) # "fig/6.png"
         self.sfc = pg.transform.rotozoom(sfc, 0, zoom) # 2.0
